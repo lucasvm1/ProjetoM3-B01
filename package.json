@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lucasvm1/ProjetoM3-01/issues"
   },
-  "homepage": "https://github.com/lucasvm1/ProjetoM3-01#readme"
+  "homepage": "https://github.com/lucasvm1/ProjetoM3-01#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
