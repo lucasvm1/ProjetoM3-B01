@@ -6,8 +6,6 @@ const cors = require('cors');
 // Configuração para usar JSON'a
 app.use(express.json());
 
-app.use(cors())
-
 // Definir dados para usar na aplicação
 const paletas = [
   {
@@ -38,9 +36,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/paletas/find-paletas', (req, res) => {
-    res.send(paletas)
-  });
-  
+  res.send(paletas);
+});
 
 app.listen(port, () => {
   console.log(`Rodando em http://localhost:${port}`);
