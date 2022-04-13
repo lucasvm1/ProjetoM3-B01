@@ -6,7 +6,7 @@ const cors = require('cors');
 // Configuração para usar JSON'a
 app.use(express.json());
 
-app.use(cors())
+app.use(cors());
 
 // Definir dados para usar na aplicação
 const paletas = [
@@ -33,12 +33,18 @@ const paletas = [
   },
 ];
 
+// GET ALL
+
 app.get('/', (req, res) => {
-  res.send('Hello Blue Módulo 3 Fullstack');
+  res.send('Hello World');
 });
 
-app.get('/paletas/find-paletas', (req, res) => {
-  res.send(paletas);
+// GET BY ID
+
+app.get('/paletas/paleta/:id', (req, res) => {
+  const paletaId = Number(req.params.id);
+  const escolhaPaleta = paletas.find((paleta) => paleta.id === paletaId);
+  res.send(escolhaPaleta);
 });
 
 app.listen(port, () => {
