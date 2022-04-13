@@ -12,23 +12,26 @@ app.use(cors());
 const paletas = [
   {
     id: 1,
-    sabor: 'Açai com Leite Condensado',
-    descricao: 'Açai com Leite Condensado',
-    foto: 'https://storage.googleapis.com/domain-images/60b1f285-d77c-444a-b734-1bc1efd2c472/products/gallery_bd17d9a3-cd93-44a9-9b44-f017a1c7a329.jpg',
+    sabor: 'Açaí com Leite Condensado',
+    descricao:
+      'Quam vulputate dignissim suspendisse in est ante in nibh mauris.',
+    foto: 'assets/images/acai-com-leite-condensado.png',
     preco: 10.0,
   },
   {
     id: 2,
     sabor: 'Banana com Nutella',
-    descricao: 'Banana com Nutella',
-    foto: 'https://storage.googleapis.com/domain-images/60b1f285-d77c-444a-b734-1bc1efd2c472/products/gallery_bd17d9a3-cd93-44a9-9b44-f017a1c7a329.jpg',
+    descricao:
+      'Quam vulputate dignissim suspendisse in est ante in nibh mauris.',
+    foto: 'assets/images/banana-com-nutella.png',
     preco: 10.0,
   },
   {
     id: 3,
     sabor: 'Chocolate Belga',
-    descricao: 'Chocolate Belga',
-    foto: 'https://storage.googleapis.com/domain-images/60b1f285-d77c-444a-b734-1bc1efd2c472/products/gallery_bd17d9a3-cd93-44a9-9b44-f017a1c7a329.jpg',
+    descricao:
+      'Quam vulputate dignissim suspendisse in est ante in nibh mauris.',
+    foto: 'assets/images/chocolate-belga.png',
     preco: 7.0,
   },
 ];
