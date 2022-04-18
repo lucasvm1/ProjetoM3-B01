@@ -5,5 +5,8 @@ const paletasController = require('../controllers/paletas.controller');
 
 router.get('/todas-paletas', paletasController.findPaletasController);
 router.get('/paleta/:id', paletasController.findPaletaByIdController);
+router.post('/create', paletasController.createPaletaController);
+router.put('/update/:id', paletasController.updatePaletaController);
+router.delete('/delete/:id', paletasController.deletePaletaController);
 
 module.exports = router;
