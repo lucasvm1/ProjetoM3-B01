@@ -10,23 +10,18 @@ const findPaletaByIdService = async (id) => {
   return paleta;
 };
 
-const createPaletaService = (newPaleta) => {
-  const newId = paletas.length + 1;
-  newPaleta.id = newId;
-  paletas.push(newPaleta);
-  return newPaleta;
+const createPaletaService = async (newPaleta) => {
+  const paletaCriada = await Paleta.create(newPaleta)
+  return paletaCriada;
 };
 
-const updatePaletaService = (id, paletaEdited) => {
-  paletaEdited['id'] = id;
-  const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);
-  paletas[paletaIndex] = paletaEdited;
-  return paletaEdited;
+const updatePaletaService = async (id, paletaEdited) => {
+  const paletaAtualizada = await Paleta.findByIdAndUpdate(id, paletaEdited);
+  return paletaAtualizada;
 };
 
-const deletePaletaService = (id) => {
-  const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);
-  return paletas.splice(paletaIndex, 1);
+const deletePaletaService = async (id) => {
+  return await Paleta.findByIdAndDelete(id);
 };
 
 module.exports = {
